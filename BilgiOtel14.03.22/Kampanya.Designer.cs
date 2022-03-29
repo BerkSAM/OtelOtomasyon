@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.kampanyapanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.oranbox = new System.Windows.Forms.ComboBox();
             this.kampanyaoran = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.kampanyatanimbox = new System.Windows.Forms.TextBox();
             this.kampanyatanim = new System.Windows.Forms.Label();
             this.kampanyaekle = new BilgiOtel14._03._22.RJButton();
             this.kampanyabitisdt = new BilgiOtel14._03._22.Components.RJDatePicker();
             this.kampanyabaslangicdt = new BilgiOtel14._03._22.Components.RJDatePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.kampanyabilgibox = new System.Windows.Forms.TextBox();
             this.kampanyabilgileri = new System.Windows.Forms.Label();
             this.kampanyaview = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
             this.kampanyapanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,12 +48,12 @@
             this.kampanyapanel.Controls.Add(this.label1);
             this.kampanyapanel.Controls.Add(this.oranbox);
             this.kampanyapanel.Controls.Add(this.kampanyaoran);
-            this.kampanyapanel.Controls.Add(this.textBox2);
+            this.kampanyapanel.Controls.Add(this.kampanyatanimbox);
             this.kampanyapanel.Controls.Add(this.kampanyatanim);
             this.kampanyapanel.Controls.Add(this.kampanyaekle);
             this.kampanyapanel.Controls.Add(this.kampanyabitisdt);
             this.kampanyapanel.Controls.Add(this.kampanyabaslangicdt);
-            this.kampanyapanel.Controls.Add(this.textBox1);
+            this.kampanyapanel.Controls.Add(this.kampanyabilgibox);
             this.kampanyapanel.Controls.Add(this.kampanyabilgileri);
             this.kampanyapanel.Controls.Add(this.kampanyaview);
             this.kampanyapanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -61,6 +61,15 @@
             this.kampanyapanel.Name = "kampanyapanel";
             this.kampanyapanel.Size = new System.Drawing.Size(801, 513);
             this.kampanyapanel.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(658, 498);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 15);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Devoloped by Berk SAM";
             // 
             // oranbox
             // 
@@ -79,16 +88,16 @@
             this.kampanyaoran.TabIndex = 49;
             this.kampanyaoran.Text = "Kampanya İndirim Oranı";
             // 
-            // textBox2
+            // kampanyatanimbox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(201, 43);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 69);
-            this.textBox2.TabIndex = 48;
+            this.kampanyatanimbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.kampanyatanimbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.kampanyatanimbox.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
+            this.kampanyatanimbox.Location = new System.Drawing.Point(201, 43);
+            this.kampanyatanimbox.Multiline = true;
+            this.kampanyatanimbox.Name = "kampanyatanimbox";
+            this.kampanyatanimbox.Size = new System.Drawing.Size(137, 69);
+            this.kampanyatanimbox.TabIndex = 48;
             // 
             // kampanyatanim
             // 
@@ -116,6 +125,7 @@
             this.kampanyaekle.Text = "Kampanya Ekle";
             this.kampanyaekle.TextColor = System.Drawing.Color.White;
             this.kampanyaekle.UseVisualStyleBackColor = false;
+            this.kampanyaekle.Click += new System.EventHandler(this.kampanyaekle_Click);
             // 
             // kampanyabitisdt
             // 
@@ -143,16 +153,16 @@
             this.kampanyabaslangicdt.TabIndex = 43;
             this.kampanyabaslangicdt.TextColor = System.Drawing.Color.White;
             // 
-            // textBox1
+            // kampanyabilgibox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(44, 43);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 69);
-            this.textBox1.TabIndex = 40;
+            this.kampanyabilgibox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.kampanyabilgibox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.kampanyabilgibox.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
+            this.kampanyabilgibox.Location = new System.Drawing.Point(44, 43);
+            this.kampanyabilgibox.Multiline = true;
+            this.kampanyabilgibox.Name = "kampanyabilgibox";
+            this.kampanyabilgibox.Size = new System.Drawing.Size(137, 69);
+            this.kampanyabilgibox.TabIndex = 40;
             // 
             // kampanyabilgileri
             // 
@@ -172,15 +182,6 @@
             this.kampanyaview.TabIndex = 24;
             this.kampanyaview.UseCompatibleStateImageBehavior = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(658, 498);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 15);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Devoloped by Berk SAM";
-            // 
             // Kampanya
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -193,6 +194,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Kampanya";
             this.Text = "Kampanya";
+            this.Load += new System.EventHandler(this.Kampanya_Load);
             this.kampanyapanel.ResumeLayout(false);
             this.kampanyapanel.PerformLayout();
             this.ResumeLayout(false);
@@ -205,12 +207,12 @@
         private System.Windows.Forms.ListView kampanyaview;
         private System.Windows.Forms.ComboBox oranbox;
         private System.Windows.Forms.Label kampanyaoran;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox kampanyatanimbox;
         private System.Windows.Forms.Label kampanyatanim;
         private RJButton kampanyaekle;
         private Components.RJDatePicker kampanyabitisdt;
         private Components.RJDatePicker kampanyabaslangicdt;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox kampanyabilgibox;
         private System.Windows.Forms.Label kampanyabilgileri;
         private System.Windows.Forms.Label label1;
     }

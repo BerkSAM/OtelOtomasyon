@@ -17,6 +17,13 @@ namespace BilgiOtel14._03._22
             InitializeComponent();
         }
 
+        //Form1 frm1;
+        //public Form1(Form1 refOfForm1)
+        //{
+        //    frm1 = refOfForm1;
+        //}
+
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             
@@ -107,6 +114,40 @@ namespace BilgiOtel14._03._22
             personelbtn.BackColor = Color.MediumSlateBlue;
             odabtn.BackColor = Color.DarkSlateBlue;
             kampanyabtn.BackColor = Color.MediumSlateBlue;
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            pnlislem.Controls.Clear();
+            Login form1 = new Login();
+            form1.TopLevel = false;
+            pnlislem.Controls.Add(form1);
+            form1.Show();
+            form1.Dock = DockStyle.Fill;
+            form1.BringToFront();
+        }
+
+        private void personelgiris_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            pnlislem.Controls.Clear();
+            Login login = new Login();
+            login.Owner = this;
+            login.TopLevel = false;
+            pnlislem.Controls.Add(login);
+            login.Show();
+            login.Dock = DockStyle.Fill;
+            login.BringToFront();
+
         }
     }
 }

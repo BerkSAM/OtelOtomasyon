@@ -35,12 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pad = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlislem = new System.Windows.Forms.Panel();
             this.kampanyabtn = new BilgiOtel14._03._22.RJButton();
             this.odabtn = new BilgiOtel14._03._22.RJButton();
             this.personelbtn = new BilgiOtel14._03._22.RJButton();
             this.musteribtn = new BilgiOtel14._03._22.RJButton();
             this.misafirbtn = new BilgiOtel14._03._22.RJButton();
-            this.pnlislem = new System.Windows.Forms.Panel();
             this.panelsekmeler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            // 
+            // pnlislem
+            // 
+            this.pnlislem.Location = new System.Drawing.Point(165, 0);
+            this.pnlislem.Name = "pnlislem";
+            this.pnlislem.Size = new System.Drawing.Size(801, 513);
+            this.pnlislem.TabIndex = 1;
+            this.pnlislem.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // kampanyabtn
             // 
@@ -203,14 +213,6 @@
             this.misafirbtn.UseVisualStyleBackColor = false;
             this.misafirbtn.Click += new System.EventHandler(this.misafirbtn_Click);
             // 
-            // pnlislem
-            // 
-            this.pnlislem.Location = new System.Drawing.Point(165, 0);
-            this.pnlislem.Name = "pnlislem";
-            this.pnlislem.Size = new System.Drawing.Size(801, 513);
-            this.pnlislem.TabIndex = 1;
-            this.pnlislem.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -222,6 +224,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Bilgi Otel ";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panelsekmeler.ResumeLayout(false);
             this.panelsekmeler.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -232,17 +235,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panelsekmeler;
-        private RJButton misafirbtn;
         private System.Windows.Forms.Label pbitis;
         private System.Windows.Forms.Label ptarih;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label pad;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private RJButton kampanyabtn;
-        private RJButton odabtn;
-        private RJButton personelbtn;
-        private RJButton musteribtn;
         public System.Windows.Forms.Panel pnlislem;
+        public RJButton misafirbtn;
+        public RJButton kampanyabtn;
+        public RJButton odabtn;
+        public RJButton personelbtn;
+        public RJButton musteribtn;
     }
 }
 

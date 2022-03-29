@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.misafireklemepanel = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.rjButton4 = new BilgiOtel14._03._22.RJButton();
             this.misafirgüncellebtn = new BilgiOtel14._03._22.RJButton();
             this.misafireklebtn = new BilgiOtel14._03._22.RJButton();
@@ -65,7 +66,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.misafiradbox = new System.Windows.Forms.TextBox();
             this.mad = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.misafireklemepanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +113,16 @@
             this.misafireklemepanel.Name = "misafireklemepanel";
             this.misafireklemepanel.Size = new System.Drawing.Size(801, 513);
             this.misafireklemepanel.TabIndex = 0;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(658, 498);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(143, 15);
+            this.label16.TabIndex = 52;
+            this.label16.Text = "Devoloped by Berk SAM";
             // 
             // rjButton4
             // 
@@ -518,16 +528,6 @@
             this.mad.Size = new System.Drawing.Size(65, 15);
             this.mad.TabIndex = 37;
             this.mad.Text = "Misafir AD";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(658, 498);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(143, 15);
-            this.label16.TabIndex = 52;
-            this.label16.Text = "Devoloped by Berk SAM";
             // 
             // Misafir
             // 
