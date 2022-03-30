@@ -30,10 +30,6 @@
         {
             this.misafireklemepanel = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.rjButton4 = new BilgiOtel14._03._22.RJButton();
-            this.misafirgüncellebtn = new BilgiOtel14._03._22.RJButton();
-            this.misafireklebtn = new BilgiOtel14._03._22.RJButton();
-            this.misafirgetirbtn = new BilgiOtel14._03._22.RJButton();
             this.label15 = new System.Windows.Forms.Label();
             this.misafirdilbox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -66,6 +62,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.misafiradbox = new System.Windows.Forms.TextBox();
             this.mad = new System.Windows.Forms.Label();
+            this.rjButton4 = new BilgiOtel14._03._22.RJButton();
+            this.misafirgüncellebtn = new BilgiOtel14._03._22.RJButton();
+            this.misafireklebtn = new BilgiOtel14._03._22.RJButton();
+            this.misafirgetirbtn = new BilgiOtel14._03._22.RJButton();
             this.misafireklemepanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,10 +108,10 @@
             this.misafireklemepanel.Controls.Add(this.label1);
             this.misafireklemepanel.Controls.Add(this.misafiradbox);
             this.misafireklemepanel.Controls.Add(this.mad);
-            this.misafireklemepanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.misafireklemepanel.Location = new System.Drawing.Point(0, 0);
+            this.misafireklemepanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.misafireklemepanel.Location = new System.Drawing.Point(0, 12);
             this.misafireklemepanel.Name = "misafireklemepanel";
-            this.misafireklemepanel.Size = new System.Drawing.Size(801, 513);
+            this.misafireklemepanel.Size = new System.Drawing.Size(801, 501);
             this.misafireklemepanel.TabIndex = 0;
             // 
             // label16
@@ -123,82 +123,6 @@
             this.label16.Size = new System.Drawing.Size(143, 15);
             this.label16.TabIndex = 52;
             this.label16.Text = "Devoloped by Berk SAM";
-            // 
-            // rjButton4
-            // 
-            this.rjButton4.BackColor = System.Drawing.Color.LightCoral;
-            this.rjButton4.BackgroundColor = System.Drawing.Color.LightCoral;
-            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton4.BorderRadius = 20;
-            this.rjButton4.BorderSize = 0;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(619, 381);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(121, 40);
-            this.rjButton4.TabIndex = 72;
-            this.rjButton4.Text = "Sil";
-            this.rjButton4.TextColor = System.Drawing.Color.White;
-            this.rjButton4.UseVisualStyleBackColor = false;
-            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
-            // 
-            // misafirgüncellebtn
-            // 
-            this.misafirgüncellebtn.BackColor = System.Drawing.Color.SlateBlue;
-            this.misafirgüncellebtn.BackgroundColor = System.Drawing.Color.SlateBlue;
-            this.misafirgüncellebtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.misafirgüncellebtn.BorderRadius = 20;
-            this.misafirgüncellebtn.BorderSize = 0;
-            this.misafirgüncellebtn.FlatAppearance.BorderSize = 0;
-            this.misafirgüncellebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.misafirgüncellebtn.ForeColor = System.Drawing.Color.White;
-            this.misafirgüncellebtn.Location = new System.Drawing.Point(342, 390);
-            this.misafirgüncellebtn.Name = "misafirgüncellebtn";
-            this.misafirgüncellebtn.Size = new System.Drawing.Size(137, 40);
-            this.misafirgüncellebtn.TabIndex = 71;
-            this.misafirgüncellebtn.Text = "Güncelle";
-            this.misafirgüncellebtn.TextColor = System.Drawing.Color.White;
-            this.misafirgüncellebtn.UseVisualStyleBackColor = false;
-            this.misafirgüncellebtn.Click += new System.EventHandler(this.misafirgüncellebtn_Click);
-            // 
-            // misafireklebtn
-            // 
-            this.misafireklebtn.BackColor = System.Drawing.Color.SlateBlue;
-            this.misafireklebtn.BackgroundColor = System.Drawing.Color.SlateBlue;
-            this.misafireklebtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.misafireklebtn.BorderRadius = 20;
-            this.misafireklebtn.BorderSize = 0;
-            this.misafireklebtn.FlatAppearance.BorderSize = 0;
-            this.misafireklebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.misafireklebtn.ForeColor = System.Drawing.Color.White;
-            this.misafireklebtn.Location = new System.Drawing.Point(342, 332);
-            this.misafireklebtn.Name = "misafireklebtn";
-            this.misafireklebtn.Size = new System.Drawing.Size(137, 40);
-            this.misafireklebtn.TabIndex = 70;
-            this.misafireklebtn.Text = "Ekle";
-            this.misafireklebtn.TextColor = System.Drawing.Color.White;
-            this.misafireklebtn.UseVisualStyleBackColor = false;
-            this.misafireklebtn.Click += new System.EventHandler(this.misafireklebtn_Click);
-            // 
-            // misafirgetirbtn
-            // 
-            this.misafirgetirbtn.BackColor = System.Drawing.Color.SlateBlue;
-            this.misafirgetirbtn.BackgroundColor = System.Drawing.Color.SlateBlue;
-            this.misafirgetirbtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.misafirgetirbtn.BorderRadius = 20;
-            this.misafirgetirbtn.BorderSize = 0;
-            this.misafirgetirbtn.FlatAppearance.BorderSize = 0;
-            this.misafirgetirbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.misafirgetirbtn.ForeColor = System.Drawing.Color.White;
-            this.misafirgetirbtn.Location = new System.Drawing.Point(342, 277);
-            this.misafirgetirbtn.Name = "misafirgetirbtn";
-            this.misafirgetirbtn.Size = new System.Drawing.Size(137, 40);
-            this.misafirgetirbtn.TabIndex = 69;
-            this.misafirgetirbtn.Text = "Getir";
-            this.misafirgetirbtn.TextColor = System.Drawing.Color.White;
-            this.misafirgetirbtn.UseVisualStyleBackColor = false;
-            this.misafirgetirbtn.Click += new System.EventHandler(this.Getir_Click);
             // 
             // label15
             // 
@@ -528,6 +452,82 @@
             this.mad.Size = new System.Drawing.Size(65, 15);
             this.mad.TabIndex = 37;
             this.mad.Text = "Misafir AD";
+            // 
+            // rjButton4
+            // 
+            this.rjButton4.BackColor = System.Drawing.Color.LightCoral;
+            this.rjButton4.BackgroundColor = System.Drawing.Color.LightCoral;
+            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton4.BorderRadius = 20;
+            this.rjButton4.BorderSize = 0;
+            this.rjButton4.FlatAppearance.BorderSize = 0;
+            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton4.ForeColor = System.Drawing.Color.White;
+            this.rjButton4.Location = new System.Drawing.Point(619, 381);
+            this.rjButton4.Name = "rjButton4";
+            this.rjButton4.Size = new System.Drawing.Size(121, 40);
+            this.rjButton4.TabIndex = 72;
+            this.rjButton4.Text = "Sil";
+            this.rjButton4.TextColor = System.Drawing.Color.White;
+            this.rjButton4.UseVisualStyleBackColor = false;
+            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
+            // 
+            // misafirgüncellebtn
+            // 
+            this.misafirgüncellebtn.BackColor = System.Drawing.Color.SlateBlue;
+            this.misafirgüncellebtn.BackgroundColor = System.Drawing.Color.SlateBlue;
+            this.misafirgüncellebtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.misafirgüncellebtn.BorderRadius = 20;
+            this.misafirgüncellebtn.BorderSize = 0;
+            this.misafirgüncellebtn.FlatAppearance.BorderSize = 0;
+            this.misafirgüncellebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.misafirgüncellebtn.ForeColor = System.Drawing.Color.White;
+            this.misafirgüncellebtn.Location = new System.Drawing.Point(342, 390);
+            this.misafirgüncellebtn.Name = "misafirgüncellebtn";
+            this.misafirgüncellebtn.Size = new System.Drawing.Size(137, 40);
+            this.misafirgüncellebtn.TabIndex = 71;
+            this.misafirgüncellebtn.Text = "Güncelle";
+            this.misafirgüncellebtn.TextColor = System.Drawing.Color.White;
+            this.misafirgüncellebtn.UseVisualStyleBackColor = false;
+            this.misafirgüncellebtn.Click += new System.EventHandler(this.misafirgüncellebtn_Click);
+            // 
+            // misafireklebtn
+            // 
+            this.misafireklebtn.BackColor = System.Drawing.Color.SlateBlue;
+            this.misafireklebtn.BackgroundColor = System.Drawing.Color.SlateBlue;
+            this.misafireklebtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.misafireklebtn.BorderRadius = 20;
+            this.misafireklebtn.BorderSize = 0;
+            this.misafireklebtn.FlatAppearance.BorderSize = 0;
+            this.misafireklebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.misafireklebtn.ForeColor = System.Drawing.Color.White;
+            this.misafireklebtn.Location = new System.Drawing.Point(342, 332);
+            this.misafireklebtn.Name = "misafireklebtn";
+            this.misafireklebtn.Size = new System.Drawing.Size(137, 40);
+            this.misafireklebtn.TabIndex = 70;
+            this.misafireklebtn.Text = "Ekle";
+            this.misafireklebtn.TextColor = System.Drawing.Color.White;
+            this.misafireklebtn.UseVisualStyleBackColor = false;
+            this.misafireklebtn.Click += new System.EventHandler(this.misafireklebtn_Click);
+            // 
+            // misafirgetirbtn
+            // 
+            this.misafirgetirbtn.BackColor = System.Drawing.Color.SlateBlue;
+            this.misafirgetirbtn.BackgroundColor = System.Drawing.Color.SlateBlue;
+            this.misafirgetirbtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.misafirgetirbtn.BorderRadius = 20;
+            this.misafirgetirbtn.BorderSize = 0;
+            this.misafirgetirbtn.FlatAppearance.BorderSize = 0;
+            this.misafirgetirbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.misafirgetirbtn.ForeColor = System.Drawing.Color.White;
+            this.misafirgetirbtn.Location = new System.Drawing.Point(342, 277);
+            this.misafirgetirbtn.Name = "misafirgetirbtn";
+            this.misafirgetirbtn.Size = new System.Drawing.Size(137, 40);
+            this.misafirgetirbtn.TabIndex = 69;
+            this.misafirgetirbtn.Text = "Getir";
+            this.misafirgetirbtn.TextColor = System.Drawing.Color.White;
+            this.misafirgetirbtn.UseVisualStyleBackColor = false;
+            this.misafirgetirbtn.Click += new System.EventHandler(this.Getir_Click);
             // 
             // Misafir
             // 

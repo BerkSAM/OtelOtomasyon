@@ -60,7 +60,6 @@ namespace BilgiOtel14._03._22
                         }
                     }
                 }
-
             }
         }
 

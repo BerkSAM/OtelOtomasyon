@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.musterilistelepanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.musteriarabox = new System.Windows.Forms.TextBox();
             this.musterieklebuton = new BilgiOtel14._03._22.RJButton();
             this.musterisorgulabuton = new BilgiOtel14._03._22.RJButton();
             this.musteriview = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
             this.musterilistelepanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,11 +44,21 @@
             this.musterilistelepanel.Controls.Add(this.musterieklebuton);
             this.musterilistelepanel.Controls.Add(this.musterisorgulabuton);
             this.musterilistelepanel.Controls.Add(this.musteriview);
-            this.musterilistelepanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.musterilistelepanel.Location = new System.Drawing.Point(0, 0);
+            this.musterilistelepanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.musterilistelepanel.Location = new System.Drawing.Point(0, 12);
             this.musterilistelepanel.Name = "musterilistelepanel";
-            this.musterilistelepanel.Size = new System.Drawing.Size(801, 513);
+            this.musterilistelepanel.Size = new System.Drawing.Size(801, 501);
             this.musterilistelepanel.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(658, 498);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 15);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Devoloped by Berk SAM";
             // 
             // musteriarabox
             // 
@@ -107,16 +117,6 @@
             this.musteriview.Size = new System.Drawing.Size(713, 366);
             this.musteriview.TabIndex = 11;
             this.musteriview.UseCompatibleStateImageBehavior = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(658, 498);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 15);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Devoloped by Berk SAM";
             // 
             // Musterilistele
             // 

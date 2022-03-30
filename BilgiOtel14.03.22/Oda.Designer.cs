@@ -29,18 +29,15 @@
         private void InitializeComponent()
         {
             this.odasatispanel = new System.Windows.Forms.Panel();
-            this.misafirekle = new BilgiOtel14._03._22.RJButton();
-            this.misafirbox = new System.Windows.Forms.ComboBox();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.musteriview = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
             this.rjButton2 = new BilgiOtel14._03._22.RJButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.rjButton1 = new BilgiOtel14._03._22.RJButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.ödemetipibox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.odakdvbox = new System.Windows.Forms.ComboBox();
+            this.odemetipibox = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.odano = new System.Windows.Forms.Label();
             this.odanobox = new System.Windows.Forms.ComboBox();
@@ -48,29 +45,30 @@
             this.kartbox = new System.Windows.Forms.ComboBox();
             this.satisindirim = new System.Windows.Forms.Label();
             this.satisindirimbox = new System.Windows.Forms.ComboBox();
-            this.rjDatePicker2 = new BilgiOtel14._03._22.Components.RJDatePicker();
+            this.odacikisdt = new BilgiOtel14._03._22.Components.RJDatePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjDatePicker1 = new BilgiOtel14._03._22.Components.RJDatePicker();
+            this.odagirisdt = new BilgiOtel14._03._22.Components.RJDatePicker();
             this.musteriad = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.musteriara = new System.Windows.Forms.TextBox();
+            this.misafirara = new System.Windows.Forms.TextBox();
+            this.misafirview = new System.Windows.Forms.ListView();
             this.odasatispanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // odasatispanel
             // 
+            this.odasatispanel.Controls.Add(this.misafirara);
+            this.odasatispanel.Controls.Add(this.misafirview);
+            this.odasatispanel.Controls.Add(this.musteriara);
             this.odasatispanel.Controls.Add(this.label5);
-            this.odasatispanel.Controls.Add(this.misafirekle);
-            this.odasatispanel.Controls.Add(this.misafirbox);
-            this.odasatispanel.Controls.Add(this.listView2);
+            this.odasatispanel.Controls.Add(this.musteriview);
             this.odasatispanel.Controls.Add(this.label4);
             this.odasatispanel.Controls.Add(this.rjButton2);
             this.odasatispanel.Controls.Add(this.textBox1);
             this.odasatispanel.Controls.Add(this.listView1);
             this.odasatispanel.Controls.Add(this.rjButton1);
             this.odasatispanel.Controls.Add(this.label3);
-            this.odasatispanel.Controls.Add(this.ödemetipibox);
-            this.odasatispanel.Controls.Add(this.label2);
-            this.odasatispanel.Controls.Add(this.odakdvbox);
+            this.odasatispanel.Controls.Add(this.odemetipibox);
             this.odasatispanel.Controls.Add(this.checkBox1);
             this.odasatispanel.Controls.Add(this.odano);
             this.odasatispanel.Controls.Add(this.odanobox);
@@ -78,56 +76,41 @@
             this.odasatispanel.Controls.Add(this.kartbox);
             this.odasatispanel.Controls.Add(this.satisindirim);
             this.odasatispanel.Controls.Add(this.satisindirimbox);
-            this.odasatispanel.Controls.Add(this.rjDatePicker2);
+            this.odasatispanel.Controls.Add(this.odacikisdt);
             this.odasatispanel.Controls.Add(this.label1);
-            this.odasatispanel.Controls.Add(this.rjDatePicker1);
+            this.odasatispanel.Controls.Add(this.odagirisdt);
             this.odasatispanel.Controls.Add(this.musteriad);
-            this.odasatispanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.odasatispanel.Location = new System.Drawing.Point(0, 0);
+            this.odasatispanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.odasatispanel.Location = new System.Drawing.Point(0, 24);
             this.odasatispanel.Name = "odasatispanel";
-            this.odasatispanel.Size = new System.Drawing.Size(801, 513);
+            this.odasatispanel.Size = new System.Drawing.Size(801, 489);
             this.odasatispanel.TabIndex = 0;
             // 
-            // misafirekle
+            // label5
             // 
-            this.misafirekle.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.misafirekle.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.misafirekle.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.misafirekle.BorderRadius = 20;
-            this.misafirekle.BorderSize = 0;
-            this.misafirekle.FlatAppearance.BorderSize = 0;
-            this.misafirekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.misafirekle.ForeColor = System.Drawing.Color.White;
-            this.misafirekle.Location = new System.Drawing.Point(336, 102);
-            this.misafirekle.Name = "misafirekle";
-            this.misafirekle.Size = new System.Drawing.Size(108, 29);
-            this.misafirekle.TabIndex = 97;
-            this.misafirekle.Text = "Misafir Getir";
-            this.misafirekle.TextColor = System.Drawing.Color.White;
-            this.misafirekle.UseVisualStyleBackColor = false;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(658, 498);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 15);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Devoloped by Berk SAM";
             // 
-            // misafirbox
+            // musteriview
             // 
-            this.misafirbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.misafirbox.FormattingEnabled = true;
-            this.misafirbox.Location = new System.Drawing.Point(301, 73);
-            this.misafirbox.Name = "misafirbox";
-            this.misafirbox.Size = new System.Drawing.Size(182, 23);
-            this.misafirbox.TabIndex = 96;
-            // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(281, 134);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(225, 334);
-            this.listView2.TabIndex = 95;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.musteriview.FullRowSelect = true;
+            this.musteriview.HideSelection = false;
+            this.musteriview.Location = new System.Drawing.Point(274, 73);
+            this.musteriview.Name = "musteriview";
+            this.musteriview.Size = new System.Drawing.Size(225, 339);
+            this.musteriview.TabIndex = 95;
+            this.musteriview.UseCompatibleStateImageBehavior = false;
+            this.musteriview.SelectedIndexChanged += new System.EventHandler(this.musteriview_SelectedIndexChanged);
+            this.musteriview.DoubleClick += new System.EventHandler(this.musteriview_DoubleClick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 453);
+            this.label4.Location = new System.Drawing.Point(41, 397);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 94;
@@ -143,7 +126,7 @@
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(649, 88);
+            this.rjButton2.Location = new System.Drawing.Point(667, 432);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(108, 40);
             this.rjButton2.TabIndex = 93;
@@ -155,7 +138,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(512, 88);
+            this.textBox1.Location = new System.Drawing.Point(530, 432);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 37);
@@ -164,7 +147,7 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(512, 134);
+            this.listView1.Location = new System.Drawing.Point(530, 478);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(245, 334);
             this.listView1.TabIndex = 91;
@@ -180,54 +163,40 @@
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(104, 428);
+            this.rjButton1.Location = new System.Drawing.Point(104, 372);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(122, 40);
             this.rjButton1.TabIndex = 90;
             this.rjButton1.Text = "Gerçekleştir";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.satisbtn);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 370);
+            this.label3.Location = new System.Drawing.Point(41, 325);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 15);
             this.label3.TabIndex = 89;
             this.label3.Text = "Ödeme Tipi";
             // 
-            // ödemetipibox
+            // odemetipibox
             // 
-            this.ödemetipibox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ödemetipibox.FormattingEnabled = true;
-            this.ödemetipibox.Location = new System.Drawing.Point(44, 388);
-            this.ödemetipibox.Name = "ödemetipibox";
-            this.ödemetipibox.Size = new System.Drawing.Size(182, 23);
-            this.ödemetipibox.TabIndex = 88;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 320);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 15);
-            this.label2.TabIndex = 87;
-            this.label2.Text = "Oda KDV";
-            // 
-            // odakdvbox
-            // 
-            this.odakdvbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.odakdvbox.FormattingEnabled = true;
-            this.odakdvbox.Location = new System.Drawing.Point(44, 338);
-            this.odakdvbox.Name = "odakdvbox";
-            this.odakdvbox.Size = new System.Drawing.Size(182, 23);
-            this.odakdvbox.TabIndex = 86;
+            this.odemetipibox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.odemetipibox.Enabled = false;
+            this.odemetipibox.FormattingEnabled = true;
+            this.odemetipibox.Location = new System.Drawing.Point(44, 343);
+            this.odemetipibox.Name = "odemetipibox";
+            this.odemetipibox.Size = new System.Drawing.Size(182, 23);
+            this.odemetipibox.TabIndex = 88;
+            this.odemetipibox.SelectedIndexChanged += new System.EventHandler(this.odemetipibox_SelectedIndexChanged);
+            this.odemetipibox.SelectionChangeCommitted += new System.EventHandler(this.odemetipibox_SelectionChangeCommitted);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(44, 428);
+            this.checkBox1.Location = new System.Drawing.Point(44, 372);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(54, 19);
             this.checkBox1.TabIndex = 85;
@@ -246,11 +215,14 @@
             // odanobox
             // 
             this.odanobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.odanobox.Enabled = false;
             this.odanobox.FormattingEnabled = true;
             this.odanobox.Location = new System.Drawing.Point(44, 289);
             this.odanobox.Name = "odanobox";
             this.odanobox.Size = new System.Drawing.Size(182, 23);
             this.odanobox.TabIndex = 83;
+            this.odanobox.SelectedIndexChanged += new System.EventHandler(this.odanobox_SelectedIndexChanged);
+            this.odanobox.SelectionChangeCommitted += new System.EventHandler(this.odanobox_SelectionChangeCommitted);
             // 
             // odakart
             // 
@@ -264,11 +236,13 @@
             // kartbox
             // 
             this.kartbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kartbox.Enabled = false;
             this.kartbox.FormattingEnabled = true;
             this.kartbox.Location = new System.Drawing.Point(44, 241);
             this.kartbox.Name = "kartbox";
             this.kartbox.Size = new System.Drawing.Size(182, 23);
             this.kartbox.TabIndex = 81;
+            this.kartbox.SelectionChangeCommitted += new System.EventHandler(this.kartbox_SelectionChangeCommitted);
             // 
             // satisindirim
             // 
@@ -287,19 +261,20 @@
             this.satisindirimbox.Name = "satisindirimbox";
             this.satisindirimbox.Size = new System.Drawing.Size(182, 23);
             this.satisindirimbox.TabIndex = 79;
+            this.satisindirimbox.SelectionChangeCommitted += new System.EventHandler(this.satisindirimbox_SelectionChangeCommitted);
             // 
-            // rjDatePicker2
+            // odacikisdt
             // 
-            this.rjDatePicker2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker2.BorderSize = 0;
-            this.rjDatePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.rjDatePicker2.Location = new System.Drawing.Point(44, 134);
-            this.rjDatePicker2.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker2.Name = "rjDatePicker2";
-            this.rjDatePicker2.Size = new System.Drawing.Size(182, 35);
-            this.rjDatePicker2.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjDatePicker2.TabIndex = 78;
-            this.rjDatePicker2.TextColor = System.Drawing.Color.White;
+            this.odacikisdt.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.odacikisdt.BorderSize = 0;
+            this.odacikisdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.odacikisdt.Location = new System.Drawing.Point(44, 134);
+            this.odacikisdt.MinimumSize = new System.Drawing.Size(4, 35);
+            this.odacikisdt.Name = "odacikisdt";
+            this.odacikisdt.Size = new System.Drawing.Size(182, 35);
+            this.odacikisdt.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.odacikisdt.TabIndex = 78;
+            this.odacikisdt.TextColor = System.Drawing.Color.White;
             // 
             // label1
             // 
@@ -310,18 +285,18 @@
             this.label1.TabIndex = 77;
             this.label1.Text = "Oda Cikis Tarihi";
             // 
-            // rjDatePicker1
+            // odagirisdt
             // 
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker1.BorderSize = 0;
-            this.rjDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.rjDatePicker1.Location = new System.Drawing.Point(44, 73);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(182, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjDatePicker1.TabIndex = 76;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.White;
+            this.odagirisdt.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.odagirisdt.BorderSize = 0;
+            this.odagirisdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.odagirisdt.Location = new System.Drawing.Point(44, 73);
+            this.odagirisdt.MinimumSize = new System.Drawing.Size(4, 35);
+            this.odagirisdt.Name = "odagirisdt";
+            this.odagirisdt.Size = new System.Drawing.Size(182, 35);
+            this.odagirisdt.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.odagirisdt.TabIndex = 76;
+            this.odagirisdt.TextColor = System.Drawing.Color.White;
             // 
             // musteriad
             // 
@@ -332,14 +307,35 @@
             this.musteriad.TabIndex = 75;
             this.musteriad.Text = "Oda Giris Tarihi";
             // 
-            // label5
+            // musteriara
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(658, 498);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 15);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Devoloped by Berk SAM";
+            this.musteriara.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.musteriara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.musteriara.Location = new System.Drawing.Point(322, 44);
+            this.musteriara.Multiline = true;
+            this.musteriara.Name = "musteriara";
+            this.musteriara.Size = new System.Drawing.Size(121, 23);
+            this.musteriara.TabIndex = 96;
+            // 
+            // misafirara
+            // 
+            this.misafirara.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.misafirara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.misafirara.Location = new System.Drawing.Point(578, 44);
+            this.misafirara.Multiline = true;
+            this.misafirara.Name = "misafirara";
+            this.misafirara.Size = new System.Drawing.Size(121, 23);
+            this.misafirara.TabIndex = 98;
+            // 
+            // misafirview
+            // 
+            this.misafirview.FullRowSelect = true;
+            this.misafirview.HideSelection = false;
+            this.misafirview.Location = new System.Drawing.Point(530, 73);
+            this.misafirview.Name = "misafirview";
+            this.misafirview.Size = new System.Drawing.Size(225, 339);
+            this.misafirview.TabIndex = 97;
+            this.misafirview.UseCompatibleStateImageBehavior = false;
             // 
             // Oda
             // 
@@ -354,6 +350,7 @@
             this.Name = "Oda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Oda";
+            this.Load += new System.EventHandler(this.Oda_Load);
             this.odasatispanel.ResumeLayout(false);
             this.odasatispanel.PerformLayout();
             this.ResumeLayout(false);
@@ -363,8 +360,6 @@
         #endregion
 
         private System.Windows.Forms.Panel odasatispanel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox odakdvbox;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label odano;
         private System.Windows.Forms.ComboBox odanobox;
@@ -372,20 +367,21 @@
         private System.Windows.Forms.ComboBox kartbox;
         private System.Windows.Forms.Label satisindirim;
         private System.Windows.Forms.ComboBox satisindirimbox;
-        private Components.RJDatePicker rjDatePicker2;
+        private Components.RJDatePicker odacikisdt;
         private System.Windows.Forms.Label label1;
-        private Components.RJDatePicker rjDatePicker1;
+        private Components.RJDatePicker odagirisdt;
         private System.Windows.Forms.Label musteriad;
         private RJButton rjButton1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox ödemetipibox;
+        private System.Windows.Forms.ComboBox odemetipibox;
         private RJButton rjButton2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label4;
-        private RJButton misafirekle;
-        private System.Windows.Forms.ComboBox misafirbox;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView musteriview;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox misafirara;
+        private System.Windows.Forms.ListView misafirview;
+        private System.Windows.Forms.TextBox musteriara;
     }
 }
