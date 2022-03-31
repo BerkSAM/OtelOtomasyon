@@ -197,7 +197,30 @@ namespace BilgiOtel14._03._22
 
         private void satisbtn(object sender, EventArgs e)
         {
-            SqlParameter[] paramses = new SqlParameter[9];
+            //Müşteriyi Diziye Ekle
+            int mmevcut = musteriview.CheckedItems.Count;
+            string[] musteri = new string[mmevcut];
+            foreach (ListViewItem item in musteriview.CheckedItems)
+            {
+                var MID = item.SubItems[0].Text;
+                musteri[0] = MID;
+                
+            }
+
+            //Misafirleri Diziye Ekle
+            
+            int mevcut = misafirview.CheckedItems.Count;
+            string[] misafir = new string[mevcut];
+            foreach (ListViewItem item in misafirview.CheckedItems)
+            {
+                int i = 0;
+                var ID = item.SubItems[0].Text;
+                misafir[i] = ID;
+                i++;
+            }
+
+            //Satışı Gerçekleştir
+            SqlParameter[] paramses = new SqlParameter[11];
             paramses[0] = new SqlParameter("@SatisOdaGirisTarihi", Convert.ToDateTime(odagirisdt.Value));
             paramses[1] = new SqlParameter("@SatisOdaCikisTarihi", Convert.ToDateTime(odacikisdt.Value));
             paramses[2] = new SqlParameter("@SatisIndirim", satisindirimbox.Text);
@@ -207,11 +230,13 @@ namespace BilgiOtel14._03._22
             paramses[6] = new SqlParameter("@OdaSatisTutar", Convert.ToDecimal(label4.Text));
             paramses[7] = new SqlParameter("@OdaSatisKDV", 18);
             paramses[8] = new SqlParameter("@OdaSatisOdemeTipiId", odemetipibox.SelectedIndex+1);
-
+            paramses[9] = new SqlParameter("@MusteriId",musteri[0]);
+            paramses[10] = new SqlParameter("@MisafirId", misafir[0]);
+             
 
             int ess = HelperSQL.SqlGeriDondurmezWithSp("sp_satis", true, paramses);
+            MessageBox.Show(ess > 0 ? "Satış başarılı" : "Satış başarısız");
 
-            MessageBox.Show(ess > 0 ? "Satış Başarılı Misafir ekleyiniz" : "Satış Başarısız");
         }
 
         private void odanobox_SelectedIndexChanged(object sender, EventArgs e)
@@ -230,6 +255,54 @@ namespace BilgiOtel14._03._22
         }
 
         private void musteriview_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void musteriara_TextChanged(object sender, EventArgs e)
+        {
+            musteriview.Items.Clear();
+            SqlDataReader dr = HelperSQL.SqlOkuyucuDondurWithSp("Select * from tbl_Musteriler where MusteriAd like '" + musteriara.Text + "%'", false, null);
+            while (dr.Read())
+            {
+                ListViewItem item = new ListViewItem(dr["MusteriID"].ToString());
+                item.SubItems.Add(dr["MusteriAd"].ToString());
+                item.SubItems.Add(dr["MusteriSoyad"].ToString());
+                item.SubItems.Add(dr["MusteriUnvan"].ToString());
+                item.SubItems.Add(dr["MusteriYetkiliAdSoyad"].ToString());
+                item.SubItems.Add(dr["MusteriTelefon"].ToString());
+                item.SubItems.Add(dr["MusteriPosta"].ToString());
+                item.SubItems.Add(dr["MusteriKurumsalOK"].ToString());
+                musteriview.Items.Add(item);
+            }
+            dr.Close();
+        }
+
+        private void misafirara_TextChanged(object sender, EventArgs e)
+        {
+            misafirview.Items.Clear();
+            SqlDataReader dr2 = HelperSQL.SqlOkuyucuDondurWithSp("Select * from tbl_Misafir where MisafirAd like '" + misafirara.Text + "%'", false, null);
+            while (dr2.Read())
+            {
+                ListViewItem item = new ListViewItem(dr2["MisafirId"].ToString());
+                item.SubItems.Add(dr2["MisafirTcKimlik"].ToString());
+                item.SubItems.Add(dr2["MisafirAd"].ToString());
+                item.SubItems.Add(dr2["MisafirSoyad"].ToString());
+                item.SubItems.Add(dr2["MisafirDogumTarihi"].ToString());
+                item.SubItems.Add(dr2["MisafirEposta"].ToString());
+                item.SubItems.Add(dr2["MisafirTelefon"].ToString());
+                item.SubItems.Add(dr2["MisafirHesKod"].ToString());
+                misafirview.Items.Add(item);
+            }
+            dr2.Close();
+        }
+        
+        private void musteriview_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+
+        }
+       
+        private void rjButton3_Click(object sender, EventArgs e)
         {
 
         }

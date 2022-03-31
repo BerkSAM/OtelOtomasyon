@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.odasatispanel = new System.Windows.Forms.Panel();
+            this.misafirara = new System.Windows.Forms.TextBox();
+            this.misafirview = new System.Windows.Forms.ListView();
+            this.musteriara = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.musteriview = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
-            this.rjButton2 = new BilgiOtel14._03._22.RJButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.rjButton1 = new BilgiOtel14._03._22.RJButton();
             this.label3 = new System.Windows.Forms.Label();
             this.odemetipibox = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -45,18 +46,19 @@
             this.kartbox = new System.Windows.Forms.ComboBox();
             this.satisindirim = new System.Windows.Forms.Label();
             this.satisindirimbox = new System.Windows.Forms.ComboBox();
-            this.odacikisdt = new BilgiOtel14._03._22.Components.RJDatePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.odagirisdt = new BilgiOtel14._03._22.Components.RJDatePicker();
             this.musteriad = new System.Windows.Forms.Label();
-            this.musteriara = new System.Windows.Forms.TextBox();
-            this.misafirara = new System.Windows.Forms.TextBox();
-            this.misafirview = new System.Windows.Forms.ListView();
+            this.rjButton3 = new BilgiOtel14._03._22.RJButton();
+            this.rjButton2 = new BilgiOtel14._03._22.RJButton();
+            this.rjButton1 = new BilgiOtel14._03._22.RJButton();
+            this.odacikisdt = new BilgiOtel14._03._22.Components.RJDatePicker();
+            this.odagirisdt = new BilgiOtel14._03._22.Components.RJDatePicker();
             this.odasatispanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // odasatispanel
             // 
+            this.odasatispanel.Controls.Add(this.rjButton3);
             this.odasatispanel.Controls.Add(this.misafirara);
             this.odasatispanel.Controls.Add(this.misafirview);
             this.odasatispanel.Controls.Add(this.musteriara);
@@ -80,11 +82,43 @@
             this.odasatispanel.Controls.Add(this.label1);
             this.odasatispanel.Controls.Add(this.odagirisdt);
             this.odasatispanel.Controls.Add(this.musteriad);
-            this.odasatispanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.odasatispanel.Location = new System.Drawing.Point(0, 24);
+            this.odasatispanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.odasatispanel.Location = new System.Drawing.Point(0, 0);
             this.odasatispanel.Name = "odasatispanel";
-            this.odasatispanel.Size = new System.Drawing.Size(801, 489);
+            this.odasatispanel.Size = new System.Drawing.Size(801, 513);
             this.odasatispanel.TabIndex = 0;
+            // 
+            // misafirara
+            // 
+            this.misafirara.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.misafirara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.misafirara.Location = new System.Drawing.Point(578, 44);
+            this.misafirara.Multiline = true;
+            this.misafirara.Name = "misafirara";
+            this.misafirara.Size = new System.Drawing.Size(121, 23);
+            this.misafirara.TabIndex = 98;
+            this.misafirara.TextChanged += new System.EventHandler(this.misafirara_TextChanged);
+            // 
+            // misafirview
+            // 
+            this.misafirview.FullRowSelect = true;
+            this.misafirview.HideSelection = false;
+            this.misafirview.Location = new System.Drawing.Point(530, 73);
+            this.misafirview.Name = "misafirview";
+            this.misafirview.Size = new System.Drawing.Size(225, 339);
+            this.misafirview.TabIndex = 97;
+            this.misafirview.UseCompatibleStateImageBehavior = false;
+            // 
+            // musteriara
+            // 
+            this.musteriara.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.musteriara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.musteriara.Location = new System.Drawing.Point(322, 44);
+            this.musteriara.Multiline = true;
+            this.musteriara.Name = "musteriara";
+            this.musteriara.Size = new System.Drawing.Size(121, 23);
+            this.musteriara.TabIndex = 96;
+            this.musteriara.TextChanged += new System.EventHandler(this.musteriara_TextChanged);
             // 
             // label5
             // 
@@ -116,24 +150,6 @@
             this.label4.TabIndex = 94;
             this.label4.Text = "label4";
             // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 20;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(667, 432);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(108, 40);
-            this.rjButton2.TabIndex = 93;
-            this.rjButton2.Text = "Kart Sorgula";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -152,25 +168,6 @@
             this.listView1.Size = new System.Drawing.Size(245, 334);
             this.listView1.TabIndex = 91;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 20;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(104, 372);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(122, 40);
-            this.rjButton1.TabIndex = 90;
-            this.rjButton1.Text = "Gerçekleştir";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.satisbtn);
             // 
             // label3
             // 
@@ -263,6 +260,80 @@
             this.satisindirimbox.TabIndex = 79;
             this.satisindirimbox.SelectionChangeCommitted += new System.EventHandler(this.satisindirimbox_SelectionChangeCommitted);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 15);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "Oda Cikis Tarihi";
+            // 
+            // musteriad
+            // 
+            this.musteriad.AutoSize = true;
+            this.musteriad.Location = new System.Drawing.Point(41, 55);
+            this.musteriad.Name = "musteriad";
+            this.musteriad.Size = new System.Drawing.Size(90, 15);
+            this.musteriad.TabIndex = 75;
+            this.musteriad.Text = "Oda Giris Tarihi";
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton3.BorderRadius = 20;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Location = new System.Drawing.Point(322, 432);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(150, 40);
+            this.rjButton3.TabIndex = 99;
+            this.rjButton3.Text = "rjButton3";
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 20;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(667, 432);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(108, 40);
+            this.rjButton2.TabIndex = 93;
+            this.rjButton2.Text = "Kart Sorgula";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 20;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(104, 372);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(122, 40);
+            this.rjButton1.TabIndex = 90;
+            this.rjButton1.Text = "Gerçekleştir";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.satisbtn);
+            // 
             // odacikisdt
             // 
             this.odacikisdt.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -276,15 +347,6 @@
             this.odacikisdt.TabIndex = 78;
             this.odacikisdt.TextColor = System.Drawing.Color.White;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 15);
-            this.label1.TabIndex = 77;
-            this.label1.Text = "Oda Cikis Tarihi";
-            // 
             // odagirisdt
             // 
             this.odagirisdt.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -297,45 +359,6 @@
             this.odagirisdt.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.odagirisdt.TabIndex = 76;
             this.odagirisdt.TextColor = System.Drawing.Color.White;
-            // 
-            // musteriad
-            // 
-            this.musteriad.AutoSize = true;
-            this.musteriad.Location = new System.Drawing.Point(41, 55);
-            this.musteriad.Name = "musteriad";
-            this.musteriad.Size = new System.Drawing.Size(90, 15);
-            this.musteriad.TabIndex = 75;
-            this.musteriad.Text = "Oda Giris Tarihi";
-            // 
-            // musteriara
-            // 
-            this.musteriara.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.musteriara.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.musteriara.Location = new System.Drawing.Point(322, 44);
-            this.musteriara.Multiline = true;
-            this.musteriara.Name = "musteriara";
-            this.musteriara.Size = new System.Drawing.Size(121, 23);
-            this.musteriara.TabIndex = 96;
-            // 
-            // misafirara
-            // 
-            this.misafirara.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.misafirara.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.misafirara.Location = new System.Drawing.Point(578, 44);
-            this.misafirara.Multiline = true;
-            this.misafirara.Name = "misafirara";
-            this.misafirara.Size = new System.Drawing.Size(121, 23);
-            this.misafirara.TabIndex = 98;
-            // 
-            // misafirview
-            // 
-            this.misafirview.FullRowSelect = true;
-            this.misafirview.HideSelection = false;
-            this.misafirview.Location = new System.Drawing.Point(530, 73);
-            this.misafirview.Name = "misafirview";
-            this.misafirview.Size = new System.Drawing.Size(225, 339);
-            this.misafirview.TabIndex = 97;
-            this.misafirview.UseCompatibleStateImageBehavior = false;
             // 
             // Oda
             // 
@@ -383,5 +406,6 @@
         private System.Windows.Forms.TextBox misafirara;
         private System.Windows.Forms.ListView misafirview;
         private System.Windows.Forms.TextBox musteriara;
+        private RJButton rjButton3;
     }
 }
