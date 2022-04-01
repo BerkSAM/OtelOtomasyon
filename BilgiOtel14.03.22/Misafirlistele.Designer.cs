@@ -52,10 +52,10 @@
             this.misafirlistelepanel.Controls.Add(this.misafirtarihilkdt);
             this.misafirlistelepanel.Controls.Add(this.rjButton1);
             this.misafirlistelepanel.Controls.Add(this.misafirview);
-            this.misafirlistelepanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.misafirlistelepanel.Location = new System.Drawing.Point(0, 28);
+            this.misafirlistelepanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.misafirlistelepanel.Location = new System.Drawing.Point(0, 0);
             this.misafirlistelepanel.Name = "misafirlistelepanel";
-            this.misafirlistelepanel.Size = new System.Drawing.Size(801, 485);
+            this.misafirlistelepanel.Size = new System.Drawing.Size(801, 513);
             this.misafirlistelepanel.TabIndex = 0;
             // 
             // label1

@@ -15,13 +15,23 @@ namespace BilgiOtel14._03._22
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
         }
 
+        private Form1 form1;
+
+        public Login(Form1 form1)
+        {
+            InitializeComponent();
+            this.form1 = form1;
+        }
+
         private void personelgiris_Click(object sender, EventArgs e)
         {
+
             if (loginbox.Text == string.Empty)
             {
                 MessageBox.Show("Lütfen TC giriniz.");
@@ -35,15 +45,17 @@ namespace BilgiOtel14._03._22
                 }
                 else if (sonuc != null)
                 {
-                    
-                        //Form1 f1 = new Form1(this);
-                    
                     MessageBox.Show("Giriş Başarılı");
                     Thread.Sleep(300);
-                    this.Close();
-                    //form.Owner = this;
+                    (this.Owner as Form1).pictureBox1.Image = Image.FromFile(Convert.ToString(HelperSQL.SqlNesneDondurWithSP("Select ResimUrlAdres from tbl_Resimler where ResimId=" + sonuc, false, null)));
+                    (this.Owner as Form1).prsadlabel.Text = Convert.ToString(HelperSQL.SqlNesneDondurWithSP("Select PersonelAd from tbl_Personel where PersonelTcKimlik='" + loginbox.Text + "'", false, null));
                     (this.Owner as Form1).misafirbtn.Enabled = true;
-                  
+                    (this.Owner as Form1).musteribtn.Enabled = true;
+                    (this.Owner as Form1).kampanyabtn.Enabled = true;
+                    (this.Owner as Form1).personelbtn.Enabled = true;
+                    (this.Owner as Form1).odabtn.Enabled = true;
+                    (this.Owner as Form1).kampanyabtn.Enabled = true;
+
                 }
             }
         }

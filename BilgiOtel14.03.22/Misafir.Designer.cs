@@ -108,10 +108,10 @@
             this.misafireklemepanel.Controls.Add(this.label1);
             this.misafireklemepanel.Controls.Add(this.misafiradbox);
             this.misafireklemepanel.Controls.Add(this.mad);
-            this.misafireklemepanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.misafireklemepanel.Location = new System.Drawing.Point(0, 12);
+            this.misafireklemepanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.misafireklemepanel.Location = new System.Drawing.Point(0, 0);
             this.misafireklemepanel.Name = "misafireklemepanel";
-            this.misafireklemepanel.Size = new System.Drawing.Size(801, 501);
+            this.misafireklemepanel.Size = new System.Drawing.Size(801, 513);
             this.misafireklemepanel.TabIndex = 0;
             // 
             // label16

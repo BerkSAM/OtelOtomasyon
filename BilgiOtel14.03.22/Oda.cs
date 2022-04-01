@@ -21,7 +21,7 @@ namespace BilgiOtel14._03._22
 
         private void Oda_Load(object sender, EventArgs e)
         {
-            
+
             //Kampanyalardan indirim oranları alınır.
             satisindirimbox.Items.Add(0);
             SqlDataReader okuyucu2 = HelperSQL.SqlOkuyucuDondurWithSp("select KampanyaIndirimOran from  tbl_Kampanyalar", false, null);
@@ -112,8 +112,8 @@ namespace BilgiOtel14._03._22
                 }
             }
             okuyucu3.Close();
-            
-            
+
+
 
 
         }
@@ -151,7 +151,7 @@ namespace BilgiOtel14._03._22
 
         private void odemetipibox_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            
+
             if (odemetipibox.SelectedIndex == 0 || odemetipibox.SelectedIndex == 1)
             {
                 SqlDataReader sqlDataReader = HelperSQL.SqlOkuyucuDondurWithSp("Select OdaFiyat from tbl_Odalar where OdaId=" + odanobox.SelectedValue, false, null);
@@ -169,11 +169,11 @@ namespace BilgiOtel14._03._22
                     label4.Text = Convert.ToString(fiyat - tutar);
                 }
             }
-            else 
+            else
             {
                 MessageBox.Show("Şuanlık sadece tam pansiyon satışı vardır. Otomatik olarak tam pansiyona çevrilmiştir");
                 odemetipibox.SelectedIndex = 0;
-        
+
             }
         }
 
@@ -197,45 +197,93 @@ namespace BilgiOtel14._03._22
 
         private void satisbtn(object sender, EventArgs e)
         {
-            //Müşteriyi Diziye Ekle
-            int mmevcut = musteriview.CheckedItems.Count;
-            string[] musteri = new string[mmevcut];
-            foreach (ListViewItem item in musteriview.CheckedItems)
-            {
-                var MID = item.SubItems[0].Text;
-                musteri[0] = MID;
-                
-            }
 
-            //Misafirleri Diziye Ekle
-            
-            int mevcut = misafirview.CheckedItems.Count;
-            string[] misafir = new string[mevcut];
-            foreach (ListViewItem item in misafirview.CheckedItems)
+            if (misafirview.CheckedItems.Count == 1)
             {
+                //Müşteriyi Diziye Ekle
+                int mmevcut = musteriview.CheckedItems.Count;
+                string[] musteri = new string[mmevcut];
+                foreach (ListViewItem item in musteriview.CheckedItems)
+                {
+                    var MID = item.SubItems[0].Text;
+                    musteri[0] = MID;
+
+                }
+
+                //Misafirleri Diziye Ekle
+
+                int mevcut = misafirview.CheckedItems.Count;
+                string[] misafir = new string[mevcut];
                 int i = 0;
-                var ID = item.SubItems[0].Text;
-                misafir[i] = ID;
-                i++;
+                foreach (ListViewItem item in misafirview.CheckedItems)
+                {
+                    var ID = item.SubItems[0].Text;
+                    misafir[i] = ID;
+                    i++;
+                }
+
+                //Satışı Gerçekleştir
+                SqlParameter[] paramses = new SqlParameter[11];
+                paramses[0] = new SqlParameter("@SatisOdaGirisTarihi", Convert.ToDateTime(odagirisdt.Value));
+                paramses[1] = new SqlParameter("@SatisOdaCikisTarihi", Convert.ToDateTime(odacikisdt.Value));
+                paramses[2] = new SqlParameter("@SatisIndirim", satisindirimbox.Text);
+                paramses[3] = new SqlParameter("@KartId", kartbox.Text);
+                paramses[4] = new SqlParameter("@OdaId", ((KeyValuePair<int, int>)odanobox.SelectedItem).Key);
+                paramses[5] = new SqlParameter("@OdaSatisDurum", checkBox1.Checked);
+                paramses[6] = new SqlParameter("@OdaSatisTutar", Convert.ToDecimal(label4.Text));
+                paramses[7] = new SqlParameter("@OdaSatisKDV", 18);
+                paramses[8] = new SqlParameter("@OdaSatisOdemeTipiId", odemetipibox.SelectedIndex + 1);
+                paramses[9] = new SqlParameter("@MusteriId", musteri[0]);
+                paramses[10] = new SqlParameter("@MisafirId", misafir[0]);
+
+
+                int ess = HelperSQL.SqlGeriDondurmezWithSp("sp_satis", true, paramses);
+                MessageBox.Show(ess > 0 ? "Satış başarılı" : "Satış başarısız");
+            }
+            else if (misafirview.CheckedItems.Count == 2)
+            {
+                //Müşteriyi Diziye Ekle
+                int mmevcut = musteriview.CheckedItems.Count;
+                string[] musteri = new string[mmevcut];
+                foreach (ListViewItem item in musteriview.CheckedItems)
+                {
+                    var MID = item.SubItems[0].Text;
+                    musteri[0] = MID;
+
+                }
+
+                //Misafirleri Diziye Ekle
+
+                int mevcut = misafirview.CheckedItems.Count;
+                string[] misafir = new string[mevcut];
+                int i = 0;
+                foreach (ListViewItem item in misafirview.CheckedItems)
+                {
+                    var ID = item.SubItems[0].Text;
+                    misafir[i] = ID;
+                    i++;
+                }
+
+                //Satışı Gerçekleştir
+                SqlParameter[] paramses = new SqlParameter[12];
+                paramses[0] = new SqlParameter("@SatisOdaGirisTarihi", Convert.ToDateTime(odagirisdt.Value));
+                paramses[1] = new SqlParameter("@SatisOdaCikisTarihi", Convert.ToDateTime(odacikisdt.Value));
+                paramses[2] = new SqlParameter("@SatisIndirim", satisindirimbox.Text);
+                paramses[3] = new SqlParameter("@KartId", kartbox.Text);
+                paramses[4] = new SqlParameter("@OdaId", ((KeyValuePair<int, int>)odanobox.SelectedItem).Key);
+                paramses[5] = new SqlParameter("@OdaSatisDurum", checkBox1.Checked);
+                paramses[6] = new SqlParameter("@OdaSatisTutar", Convert.ToDecimal(label4.Text));
+                paramses[7] = new SqlParameter("@OdaSatisKDV", 18);
+                paramses[8] = new SqlParameter("@OdaSatisOdemeTipiId", odemetipibox.SelectedIndex + 1);
+                paramses[9] = new SqlParameter("@MusteriId", musteri[0]);
+                paramses[10] = new SqlParameter("@MisafirId", misafir[0]);
+                paramses[11] = new SqlParameter("@MisafirId2", misafir[1]);
+
+                int ess = HelperSQL.SqlGeriDondurmezWithSp("sp_satisikili", true, paramses);
+                MessageBox.Show(ess > 0 ? "Satış başarılı" : "Satış başarısız");
+
             }
 
-            //Satışı Gerçekleştir
-            SqlParameter[] paramses = new SqlParameter[11];
-            paramses[0] = new SqlParameter("@SatisOdaGirisTarihi", Convert.ToDateTime(odagirisdt.Value));
-            paramses[1] = new SqlParameter("@SatisOdaCikisTarihi", Convert.ToDateTime(odacikisdt.Value));
-            paramses[2] = new SqlParameter("@SatisIndirim", satisindirimbox.Text);
-            paramses[3] = new SqlParameter("@KartId", kartbox.Text);
-            paramses[4] = new SqlParameter("@OdaId", ((KeyValuePair<int, int>)odanobox.SelectedItem).Key);
-            paramses[5] = new SqlParameter("@OdaSatisDurum", checkBox1.Checked);
-            paramses[6] = new SqlParameter("@OdaSatisTutar", Convert.ToDecimal(label4.Text));
-            paramses[7] = new SqlParameter("@OdaSatisKDV", 18);
-            paramses[8] = new SqlParameter("@OdaSatisOdemeTipiId", odemetipibox.SelectedIndex+1);
-            paramses[9] = new SqlParameter("@MusteriId",musteri[0]);
-            paramses[10] = new SqlParameter("@MisafirId", misafir[0]);
-             
-
-            int ess = HelperSQL.SqlGeriDondurmezWithSp("sp_satis", true, paramses);
-            MessageBox.Show(ess > 0 ? "Satış başarılı" : "Satış başarısız");
 
         }
 
@@ -244,7 +292,6 @@ namespace BilgiOtel14._03._22
             KeyValuePair<int, int> selectedPair = (KeyValuePair<int, int>)odanobox.SelectedItem;
         }
 
-        string ID;
         private void musteriview_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListViewItem secilen = musteriview.FocusedItem;//focusedıtem senin seçtiğin listview itemi alır
@@ -296,12 +343,12 @@ namespace BilgiOtel14._03._22
             }
             dr2.Close();
         }
-        
+
         private void musteriview_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
 
         }
-       
+
         private void rjButton3_Click(object sender, EventArgs e)
         {
 

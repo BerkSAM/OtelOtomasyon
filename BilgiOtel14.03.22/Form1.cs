@@ -17,12 +17,6 @@ namespace BilgiOtel14._03._22
             InitializeComponent();
         }
 
-        //Form1 frm1;
-        //public Form1(Form1 refOfForm1)
-        //{
-        //    frm1 = refOfForm1;
-        //}
-
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -31,6 +25,8 @@ namespace BilgiOtel14._03._22
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Login login = new Login();
+            login.Owner = this;
             
         }
 
@@ -127,17 +123,18 @@ namespace BilgiOtel14._03._22
             form1.BringToFront();
         }
 
-        private void personelgiris_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
+        public bool misafirbtng
+        {
+            get { return misafirbtn.Enabled; }
+            set { misafirbtn.Enabled = value; }
+        }
 
-        private void Form1_Load_1(object sender, EventArgs e)
+   
+            private void Form1_Load_1(object sender, EventArgs e)
         {
             pnlislem.Controls.Clear();
             Login login = new Login();

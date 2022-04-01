@@ -44,10 +44,10 @@
             this.musterilistelepanel.Controls.Add(this.musterieklebuton);
             this.musterilistelepanel.Controls.Add(this.musterisorgulabuton);
             this.musterilistelepanel.Controls.Add(this.musteriview);
-            this.musterilistelepanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.musterilistelepanel.Location = new System.Drawing.Point(0, 12);
+            this.musterilistelepanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.musterilistelepanel.Location = new System.Drawing.Point(0, 0);
             this.musterilistelepanel.Name = "musterilistelepanel";
-            this.musterilistelepanel.Size = new System.Drawing.Size(801, 501);
+            this.musterilistelepanel.Size = new System.Drawing.Size(801, 513);
             this.musterilistelepanel.TabIndex = 0;
             // 
             // label1

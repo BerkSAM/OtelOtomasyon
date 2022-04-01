@@ -19,7 +19,6 @@ namespace BilgiOtel14._03._22
             InitializeComponent();
         }
         string yol;
-        string aciklama;
         private void personelresimbtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();

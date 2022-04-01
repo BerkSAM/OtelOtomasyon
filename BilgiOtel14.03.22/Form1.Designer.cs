@@ -32,15 +32,15 @@
             this.panelsekmeler = new System.Windows.Forms.Panel();
             this.pbitis = new System.Windows.Forms.Label();
             this.ptarih = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.prsadlabel = new System.Windows.Forms.Label();
             this.pad = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlislem = new System.Windows.Forms.Panel();
             this.kampanyabtn = new BilgiOtel14._03._22.RJButton();
             this.odabtn = new BilgiOtel14._03._22.RJButton();
             this.personelbtn = new BilgiOtel14._03._22.RJButton();
             this.musteribtn = new BilgiOtel14._03._22.RJButton();
             this.misafirbtn = new BilgiOtel14._03._22.RJButton();
+            this.pnlislem = new System.Windows.Forms.Panel();
             this.panelsekmeler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             // 
             this.panelsekmeler.Controls.Add(this.pbitis);
             this.panelsekmeler.Controls.Add(this.ptarih);
-            this.panelsekmeler.Controls.Add(this.label1);
+            this.panelsekmeler.Controls.Add(this.prsadlabel);
             this.panelsekmeler.Controls.Add(this.pad);
             this.panelsekmeler.Controls.Add(this.pictureBox1);
             this.panelsekmeler.Controls.Add(this.kampanyabtn);
@@ -80,14 +80,14 @@
             this.ptarih.TabIndex = 9;
             this.ptarih.Text = "Mesai Bitiş:";
             // 
-            // label1
+            // prsadlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Mustafa Berk";
+            this.prsadlabel.AutoSize = true;
+            this.prsadlabel.Location = new System.Drawing.Point(87, 154);
+            this.prsadlabel.Name = "prsadlabel";
+            this.prsadlabel.Size = new System.Drawing.Size(70, 13);
+            this.prsadlabel.TabIndex = 8;
+            this.prsadlabel.Text = "Mustafa Berk";
             // 
             // pad
             // 
@@ -110,14 +110,6 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
-            // pnlislem
-            // 
-            this.pnlislem.Location = new System.Drawing.Point(165, 0);
-            this.pnlislem.Name = "pnlislem";
-            this.pnlislem.Size = new System.Drawing.Size(801, 513);
-            this.pnlislem.TabIndex = 1;
-            this.pnlislem.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // kampanyabtn
             // 
             this.kampanyabtn.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -125,6 +117,7 @@
             this.kampanyabtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.kampanyabtn.BorderRadius = 20;
             this.kampanyabtn.BorderSize = 0;
+            this.kampanyabtn.Enabled = false;
             this.kampanyabtn.FlatAppearance.BorderSize = 0;
             this.kampanyabtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kampanyabtn.ForeColor = System.Drawing.Color.White;
@@ -144,6 +137,7 @@
             this.odabtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.odabtn.BorderRadius = 20;
             this.odabtn.BorderSize = 0;
+            this.odabtn.Enabled = false;
             this.odabtn.FlatAppearance.BorderSize = 0;
             this.odabtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.odabtn.ForeColor = System.Drawing.Color.White;
@@ -163,6 +157,7 @@
             this.personelbtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.personelbtn.BorderRadius = 20;
             this.personelbtn.BorderSize = 0;
+            this.personelbtn.Enabled = false;
             this.personelbtn.FlatAppearance.BorderSize = 0;
             this.personelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.personelbtn.ForeColor = System.Drawing.Color.White;
@@ -182,6 +177,7 @@
             this.musteribtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.musteribtn.BorderRadius = 20;
             this.musteribtn.BorderSize = 0;
+            this.musteribtn.Enabled = false;
             this.musteribtn.FlatAppearance.BorderSize = 0;
             this.musteribtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.musteribtn.ForeColor = System.Drawing.Color.White;
@@ -201,6 +197,7 @@
             this.misafirbtn.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.misafirbtn.BorderRadius = 20;
             this.misafirbtn.BorderSize = 0;
+            this.misafirbtn.Enabled = false;
             this.misafirbtn.FlatAppearance.BorderSize = 0;
             this.misafirbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.misafirbtn.ForeColor = System.Drawing.Color.White;
@@ -212,6 +209,14 @@
             this.misafirbtn.TextColor = System.Drawing.Color.White;
             this.misafirbtn.UseVisualStyleBackColor = false;
             this.misafirbtn.Click += new System.EventHandler(this.misafirbtn_Click);
+            // 
+            // pnlislem
+            // 
+            this.pnlislem.Location = new System.Drawing.Point(165, 0);
+            this.pnlislem.Name = "pnlislem";
+            this.pnlislem.Size = new System.Drawing.Size(801, 513);
+            this.pnlislem.TabIndex = 1;
+            this.pnlislem.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form1
             // 
@@ -234,18 +239,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelsekmeler;
+        public System.Windows.Forms.Panel panelsekmeler;
         private System.Windows.Forms.Label pbitis;
         private System.Windows.Forms.Label ptarih;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label pad;
-        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel pnlislem;
         public RJButton misafirbtn;
         public RJButton kampanyabtn;
         public RJButton odabtn;
         public RJButton personelbtn;
         public RJButton musteribtn;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label prsadlabel;
     }
 }
 
